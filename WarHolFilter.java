@@ -1,15 +1,15 @@
 import java.awt.Color;
 
 /**
- * Write a description of class WarHolFilter here.
+ * WarHoleFilter makes 4 smaller size images of the image chosen. Top left is without anything,
+ * Top right is with a red tint, Bottom left with a green tint, and Bottom right a blue tint.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Cristian Solis
  */
 public class WarHolFilter extends Filter
 {
     /**
-     * Constructor for objects of class BlueChannelFilter.
+     * Constructor for objects of class WarHolFilter.
      * @param name The name of the filter.
      */
     public WarHolFilter(String name)

@@ -1,15 +1,16 @@
 import java.awt.Color;
 
 /**
- * Write a description of class FlippedWarHolFilter here.
+ * FlippedWarHolFilter makes 4 smaller size images of the image chosen. Top left is without anything,
+ * Top right is with a red tint and mirroed horizontally, Bottom left with a green tint and mirroed vertically, 
+ * and Bottom right a blue tint and mirroed horizontally and vertically.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Cristian Solis
  */
 public class FlippedWarHolFilter extends Filter
 {
     /**
-     * Constructor for objects of class BlueChannelFilter.
+     * Constructor for objects of class FlippedWarHolFilter.
      * @param name The name of the filter.
      */
     public FlippedWarHolFilter(String name)
@@ -24,9 +25,6 @@ public class FlippedWarHolFilter extends Filter
      */
     public void apply(OFImage image)
     {
-        //int height = image.getHeight();
-        //int width = image.getWidth();
-        
        int halfWidth = image.getWidth() / 2;
        int halfHeight = image.getHeight() / 2;
        OFImage copy = new OFImage(image);
@@ -41,26 +39,7 @@ public class FlippedWarHolFilter extends Filter
                 image.setPixel(halfWidth - 1 - x + halfWidth , y, new Color(redColor, 0, 0)); // Top-right, Red tint Mirrored horizontally      
                 image.setPixel(x, halfHeight - 1 - y + halfHeight, new Color(0, greenColor, 0)); // Bottom-left, Green tint Mirrored vertically
                 image.setPixel(halfWidth - 1 - x + halfWidth, halfHeight - 1 - y + halfHeight, new Color(0, 0, blueColor)); // Bottom-right, Blue tint Mirrored horizontally and vertically
-
-                //image.setPixel(x, y, image.getPixel(width - 1 - x, y));
-                //image.setPixel(width - 1 - x, y, left);
             }
         }
-   
-        /*
-        public void apply(OFImage image)
-    `{
-        int height = image.getHeight();
-        int width = image.getWidth();
-        for(int y = 0; y < height; y++) {
-            for(int x = 0; x < width / 2; x++) {
-                Color left = image.getPixel(x, y);
-                image.setPixel(x, y, image.getPixel(width - 1 - x, y));
-                image.setPixel(width - 1 - x, y, left);
-                }
-            }
-    `}
-         */
-   
     }
 }

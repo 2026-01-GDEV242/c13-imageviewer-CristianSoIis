@@ -1,7 +1,7 @@
 import java.awt.Color;
 
 /**
- * An image filter to find red value in pixels
+ * An image filter to find green value in pixels
  * 
  * @author Cristian Solis
  * 

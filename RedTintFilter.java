@@ -1,7 +1,7 @@
 import java.awt.Color;
 
 /**
- * An image filter to find red value in pixels
+ * An image filter to show the image in red tint 
  * 
  * @author Cristian Solis
  * 

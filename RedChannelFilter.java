@@ -26,11 +26,6 @@ public class RedChannelFilter extends Filter
     {
         int height = image.getHeight();
         int width = image.getWidth();
-        for(int i = 0; i < 4; i++)
-        {
-            
-        }
-        
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
                 Color pix = image.getPixel(x, y);
