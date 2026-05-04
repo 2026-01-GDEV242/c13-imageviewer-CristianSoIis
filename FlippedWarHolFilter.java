@@ -15,7 +15,7 @@ public class FlippedWarHolFilter extends Filter
      */
     public FlippedWarHolFilter(String name)
     {
-        super(name);
+        super(name);  
     }
 
     /**
